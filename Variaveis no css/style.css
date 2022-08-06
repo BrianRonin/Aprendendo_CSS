@@ -1,0 +1,36 @@
+
+
+
+/* :root é o nosso html */
+:root{
+
+    /*
+é possivel criar variaveis no root com --nome: (um valor como cor ou px)
+isso é util pra fazer alterações em bastante coisa ao mesmo tempo
+*/
+    --aqua: gray;
+    --tamanho: 200px;
+}
+
+.p2{
+    color: var(--aqua);
+    font-size: 25px
+}
+
+.p3{
+    color: var(--aqua);
+    font-size: 14px;
+}
+
+.sqr1{
+    width: var(--tamanho);
+    height: var(--tamanho);
+    background-color: black;
+}
+
+.sqr2{
+    width: var(--tamanho);
+    height: var(--tamanho);
+    background-color: green;
+}
+

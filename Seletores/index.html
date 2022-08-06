@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    
+    <div>
+        
+        <h1 width=300 >titulo1</h1>
+        <h2>titulo2</h2>
+        <h3>titulo3</h3>
+        <h4 width=500>titulo4</h4>
+        <h5 width=200>titulo5</h5>
+        <h6>titulo6</h6>
+
+    </div>
+    
+    <div>
+
+        <h1 title="titulo 1" >titulo1</h1>
+        <h2 title="titan 2">titulo2</h2>
+        <h3 title="titan 3">titulo3</h3>
+        <h4 title="titulo 4">titulo4</h4>
+        <h5 title="titulo 5">titulo5</h5>
+        <h6 title="entao final">titulo6</h6>
+
+        <script>
+//é possivel selecionar um atributo do html tambem pelo js mas só vei pegar o primeiro
+            let titulo = document.querySelector("[title]")
+            console.log(titulo)
+//se eu quiser selecionar todos com um atribudo do html utilizo querySelectorAll
+            let todosTitulo = document.querySelectorAll("[title]")
+            console.log(todosTitulo)
+//inclusive posso usar todas as forma de seletor de propriedade do do atributo no css
+//apenas com numero que nao sei como faz que da erro
+            let todosTituloQueTemN = document.querySelectorAll("[title*=n")
+            console.log(todosTituloQueTemN)
+
+        </script>
+    </div>
+    
+    <h1>Antes do head1</h1>
+    <h1>Antes do head1</h1>
+    
+    <header class="header1">
+
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+        <p>Parágrafo 4</p>
+        <p>Parágrafo 5</p>
+        <p>Parágrafo 6</p>
+
+    </header>
+
+    <h1>Após o head1</h1>
+    <h1>Após o head1</h1>
+        <div></div>   
+    <h1>Antes do head2</h1>
+    <h1>Antes do head2</h1>
+    
+    <header class="header2">
+
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+        <p>Parágrafo 4</p>
+        <p>Parágrafo 5</p>
+        <p>Parágrafo 6</p>
+
+    </header>
+
+    <h1>Após o head2</h1>
+    <h1>Após o head2</h1>
+
+    <div>
+
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+        <p>Parágrafo 4</p>
+        <p>Parágrafo 5</p>
+        <p>Parágrafo 6</p>
+
+    </div>
+    
+    <div class="b">
+
+        <h1>Parágrafo 1</h1>
+        <h1>Parágrafo 2</h1>
+        <section>
+        <h1>Parágrafo 3</h1>
+        <h1>Parágrafo 4</h1>
+        <h1>Parágrafo 5</h1>
+        </section>
+        <h1>Parágrafo 6</h1>
+
+    </div>
+
+</body>
+</html>

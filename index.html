@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha pagina</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body{
+            font-size: 1.2rem;
+        }
+        /* #conteiner2{
+            text-align: right;
+        } */
+
+        #static{
+            position: static;
+            left: 20px;
+        }
+        
+        .absolute{
+            position: absolute;
+            top: 40px;
+
+        }
+        
+        .sticky{
+            position: sticky;
+            top: 0;
+        }
+
+        .ret{
+            width: 200px;
+            height: 500px;
+            margin-top: 10px;
+            overflow-y: auto ;
+        }
+
+        .fixed{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .relative{
+            position: relative;
+
+        }
+
+        .static{
+            position: static;
+
+        }
+
+        .quadrado{
+            width: 100px;
+            height: 100px; 
+            display: inline-block;
+        }
+
+        .bg-red{
+            background-color: red;
+        }
+
+        .bg-blue{
+            background-color: blue;
+        }
+        .bg-green{
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+        <div>Esta é uma div normal</div>
+        <div>E aqui a historia<div>Div de dentro</div>
+        continua<div>
+
+        </div>
+        <div>
+
+            <p id="ad">Este é um paragrafo normal</p>
+            <p>E aqui a hístória continua</p>
+
+        </div>
+
+
+        <div id="container">
+            <img src="../Desafio HTML Modulo 2/174879.png" alt="">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam voluptatum debitis eligendi eum itaque rem modi est sunt officia rerum natus dolores tempore, nostrum ut ad, et voluptas explicabo excepturi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, esse. Expedita nisi, aut blanditiis, voluptates minima amet at asperiores architecto culpa cum, accusamus et similique consequatur ipsam voluptate? Consequatur, rem?
+        </div>
+
+<br><br><br>
+
+
+        <div id="quadrado">
+            ai
+        </div>
+
+<br><br>
+
+    <div id="container2">
+        OLA
+        <img id="img" src="../Desafio HTML Modulo 2/hqdefault.jpg" alt="">
+    </div>
+
+    <div class="static quadrado bg-blue">
+        
+    </div>
+    <div class="fixed quadrado bg-red">
+
+    </div>
+
+    <div class="static ret bg-blue">
+        
+    </div>
+    <div class="static ret bg-blue">
+        
+    </div>
+    <div class="static ret bg-blue">
+        
+    </div>
+    <div class="static ret bg-blue">
+        
+    </div>
+    <div class="static ret bg-blue">
+        
+    </div>
+<br><br><br>
+
+<div class="static quadrado bg-blue"></div>
+
+<div class="ret relative bg-blue">
+    <div class="static quadrado bg-red"></div>
+    <div class="absolute quadrado bg-green"></div>
+</div>
+
+<br><br><br><br>
+
+
+
+<div class="bg-blue ret">
+
+    <div class="quadrado bg-red"></div>
+    <div class="quadrado bg-green sticky"></div>
+    <div class="quadrado bg-red"></div>
+    <div class="quadrado bg-red"></div>
+    <div class="quadrado bg-red"></div>
+    <div class="quadrado bg-red"></div>
+    <div class="quadrado bg-red"></div>
+    <div class="quadrado bg-red"></div>
+    <div class="quadrado bg-red"></div>
+    <div class="quadrado bg-red"></div>
+    <div class="quadrado bg-red"></div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

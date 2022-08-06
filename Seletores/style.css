@@ -1,0 +1,72 @@
+/* * é um seletor que seleciona todo elemento da nossa pagina */
+
+*{
+    margin: 0%;
+    background-color: aqua;
+}
+
+
+/* tambem posso selecionar todos elementos que tenham apenas um atributo */
+[width]{
+    background-color: blueviolet;
+}
+/* e ir um pouco mais alem escolhendo apenas os que tem uma propriedade do atributo */
+[width="200"]{
+    background-color: yellow;
+}
+
+/* usando "^=" seleciono toda com toda propriedade com o atribudo que começa com a letra */
+[title^="t"]{
+    background-color: blueviolet;
+}
+
+/* usando "~=" seleciono todos de um atributo com todas propriedades que comecem com a palavra */
+[title~="titulo"]{
+    background-color: yellow;
+}
+
+/* usando "$=" consigo selecionar todos com o atributo com uma propriedade no final
+seja numero ou palavra */
+[title$="final"]{
+    background-color: brown;
+}
+
+/* por fim "*=" vai selecionar uma determinada propriedade do atributo que esteja em qualquer lugar */
+[title*="5"]{
+    background-color:greenyellow;
+}
+
+
+
+
+
+
+
+/* voce pode selecionar mais de um elemento com a virgula voce pode usar classe id do mesmo jeito */
+div, header{
+    margin: 10%;
+}
+
+/* voce tambem pode selecionar sem precisar da virgula se for um tipo dentro de outro tipo assim
+ voce consegue usar classe e id tambem */
+div p{
+    background-color: yellow;
+}
+
+/* tambem posso utilizar o ">" pra dizer que quero pegar apenas o filho
+daquele elemento não o filho do filho de outra divisao no elemento */
+.b > h1{
+    background-color: blueviolet;
+}
+
+/* tambem consigo utilizar o + pra selecionar algo que vem apos aquele elemento
+tambem pode ser class id */
+
+.header1 + h1{
+    background-color: brown;
+}
+
+/* ja o ~ serve pra selecionar tudo que voce escolher apos o elemento */
+.header2 ~ h1{
+    background-color: brown;
+}

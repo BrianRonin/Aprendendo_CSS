@@ -1,0 +1,58 @@
+
+/* pra utilizar pseudo elemento é assim :: depois do elemento
+first-line vai definir o estilo apenas da primeira linha */
+
+p::first-line{
+
+    color: red;
+
+}
+
+/* ::first-letter vai definir o estilo da primeira letra apenas */
+p::first-letter{
+
+    font-size: 5rem;
+
+}
+
+li{
+    list-style: none;
+}
+/* ::before serve pra voce colocar qualquer coisa antes */
+.li::before{
+    content: "A";
+    color: aqua;
+    font-size: 2rem;
+}
+
+/* tambem com alguns comandos da pra colocar imagem antes */
+.li2::before{
+    content: '';
+    background-image: url(./174879.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+}
+
+/* ::after é a mesma coisa que o before só que vem por ultimo o elemento */
+
+.li2::after{
+    content: '';
+    background-image: url(./174879.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+}
+/* ::selection altera o elemento ao selecionalo */
+p::selection{
+    background-color: aqua;
+    color: yellow;
+}

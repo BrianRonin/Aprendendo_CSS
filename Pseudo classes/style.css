@@ -1,0 +1,43 @@
+/* a diferença do pseudo elemento para pseudo class é que 
+pseudo class vai ter uma vez só os 2 pontos ":" */
+
+/* :focus atribui o style apenas para aquilo que estiver em foco como por exemplo input */
+input:focus{
+    color: red;
+}
+
+/* :first-child vai selecionar o primeiro filho do pai no caso a lista
+    se o <li></li> nao for o primeiro filho não vai selecionar nada */
+li:first-child{
+    color:blue
+}
+
+/* :nth-child(?) vai selecionar o proximo filho que voce escolher alem do primeiro no parenteses */
+li:nth-child(4){
+    color:red
+}
+/* :nth-last-of-type(?) é a mesma coisa que o de cima mais vai contabilizar de tras pra frente no parenteses */
+li:nth-last-child(4){
+    color: green;
+}
+
+
+/* :first-of-type vai selecionar o primeiro do tipo  */
+h1:first-of-type{
+    color: aqua;
+}
+/* :nth-of-type(?) vai selecionar o proximo depois do primeiro do tipo que voce escolher no parenteses */
+h1:nth-of-type(4){
+    color: red;
+}
+/* :nth-last-of-type(?) é a mesma coisa que o de cima mais vai contabilizar de tras pra frente no parenteses */
+h1:nth-last-of-type(4){
+    color: green;
+}
+
+/* voce tambem consegue colocar no pseudo class no parenteses
+(?n) divisiveis por ?
+(?n -?)
+(odd) impares
+(even) pares
+*/

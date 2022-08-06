@@ -1,0 +1,217 @@
+.container{
+ /*
+  display grid ou tela em grade diferente do display flex que ou é coluna ou uma fila
+  no display grid voce pode ter os 2 ao mesmo tempo */
+  display: grid;
+
+
+/*grid-template-rows ou linha de modelo de grade, serve pra voce definir quantas linhas
+vai ter no seu template */
+ grid-template-rows: auto auto;
+/*grid-template-columns ou linha de modelo de coluna, serve pra definir quantas colunas
+ vai ter no seu template */
+ grid-template-columns: auto auto auto; 
+/* voce deve preencher o grid template dando espaço pra cada coluna ou linha
+
+"auto" vai se adaptar ao tamanho da tela ou o tamanho do elemento
+"15%"  porcentagem
+"15px" px porem utilizando px ao diminuir a tela o item pode vazar do container
+e vai deixar de ser responsivo
+"fr"   fração
+
+uma outra forma mais facil de definir as linhas e colunas
+                X Linhas / y Colunas                         
+grid-template: auto auto / auto auto auto;                    */
+
+
+/*
+Grid-gap: serve pra dar um espaçamento entre todos os elementos
+row-gap: serve pra dar um espaçamento entre todas linhas
+column-gap: serve pra dar um espaçamento entre todas culunas 
+gap: 10px;
+row-gap: 100px;
+column-gap: 40px;                                                   */
+
+/*
+justfy-items ou justificar itens justifica os itens como irão posicionar
+em relação a linha horizontal eixo x por padrão fica stretch*/
+justify-items: center;
+
+/*
+align-items ou alinhamento de itens alinha os itens em como irão posicionar
+em relação a linha vertical eixo y por padrão fica stretch*/
+align-items: center;
+/*
+Justify-content: é a mesma coisa que justfy-items
+Align-content: é a mesma coisa que align-items
+a unica diferença é que com o content não tem o espaçamento igual o items
+e se usar o content não consegue usar o items alem dos 4 ficar por padrao stretch    */
+justify-content: stretch; 
+align-content: stretch;
+
+
+
+
+
+
+
+
+height: 500px;
+gap: 0px;
+padding: 0px;
+background-color: gray;
+color: white;
+}
+.r1{background-color: red;}
+.r2{background-color: blue;}
+.r3{background-color: green;}
+.r4{background-color: red;}
+.r5{background-color: blue;}
+.r6{background-color: green;}
+.rect{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+ /*
+ ///////////////////////////////////// GRID TEMPLATE AREA ///////////////////////////////////////////////////////////////// */
+.container2{
+
+
+
+
+    color: white;
+    display: grid;
+    background-color: burlywood;
+    padding: 10px;
+
+                         /* colunas */
+    grid-template-areas: "a2 a2 a2 a2 a2 a2"
+                         "a1 a1 a3 a3 a3 a3"       
+             /*linhas*/  "a1 a1 a5 a4 a4 a4"        
+                         "a6 a6 a6 a6 a6 a6"       ;
+
+                                /*itens*/
+
+}
+
+
+.a1{
+background-color: red;
+}
+
+.a2{
+background-color: blue;
+}
+
+.a3{
+background-color: green;
+}
+
+
+/* Grid-area: mapeia o item pra voce poder usar no grid template area */
+
+.item1{
+    grid-area: a1;
+}
+
+.item2{
+    grid-area: a2;
+}
+
+.item3{
+    grid-area: a3;
+}
+
+.item4{
+    grid-area: a4;
+}
+
+.item5{
+    grid-area: a5;
+}
+
+.item6{
+    grid-area: a6;
+}
+/* 
+
+//////////////////////////// GRID COLUMN E ROW, START E END //////////////////////////////////////////////////////////////// */
+.container3{
+            
+    /*
+                é uma outra forma de organizar seus item parecido com grid template area
+                porem usando column row start e end no proprio item pra identificar
+                aonde inicia e aonde termina verticalmente e horizontalmente
+            */
+
+
+
+    color: white;
+    display: grid;
+    background-color: gray;
+
+    padding: 10px;
+
+    grid-template: auto auto auto auto / auto auto auto auto auto auto
+
+}
+
+
+.s1{
+    background-color: red;
+}
+
+.s2{
+    background-color: blue;
+}
+
+.s3{
+    background-color: green;
+}
+
+.iitem1{
+    /*
+    posicionamento da linha do item
+    grid-row-start: vai identificar o inicio da linha
+    grid-row-end: vai identificar até aonde o final da linha
+    posicionamento da coluna do item
+    grid-column-start: vai identificar o inicio da coluna daquele item
+    grid-colum-end: vai identificar o final da coluna daquele item
+
+    "span" vai adicionar um valor a linha ou coluna da posição atual
+
+*/
+    
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.iitem2{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+
+.iitem3{
+    grid-column-end: span 4;
+}
+
+.iitem4{
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.iitem5{
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+
+.iitem6{
+    grid-column-start: 1;
+    grid-column-end: 7;
+}

@@ -1,0 +1,106 @@
+.container{
+
+/*
+É um display que te da mais flexibilidade mesmo diminuindo ou aumentando a tela
+o flex box vai tentar se manter*/
+display: flex;
+
+/*
+flex direction: vai modificar a direção
+"row" fica em linha "column" fica em coluna por padrao vem o row
+tem tambem o "row-reverse" e "column-reverse" como o nome sugere vai
+começar do inverso*/        
+flex-direction: row;
+/*
+
+flex-wrap: wrap ingles é embrulho o flex-wrap vai modifcar oque fazer
+ao embrulhar a pagina ou seja diminuir aumentar esticar
+
+"wrap" vai manter a proporção original ao maximo
+"wrap-reverse" vai faze a mesma coisa porem inverter a ordem dos  itens*/
+flex-wrap: nowrap;
+
+/*
+tem uma forma mais rapida tambem de definir o flex-wrap e flex-direction
+flex-flow: row wrap;
+nao vai mudar nada pro pradrao*/
+
+/*
+justify-content ou justificar o conteudo alinha aonde voce quer
+os conteudos no eixo principal column = y row = x
+por padrao vem "flex-start" no inicio do x ou y
+"center" coloca no centro
+"flex-start" inicio
+"end" "flex-end" no final
+"sapce-between" vai manter o espaço maximo possivel entre os elementos
+"space-around" vai tentar manter um espaço igual pra todos os elementos
+"space-evenly" diferente do around ele não vai tentar ele vai manter */
+justify-content: flex-start;
+
+/*
+align-items ou alinhamento de itens vem como posição secundaria da principal
+se for column = x row = y por padrão ele esta sempre "stretch"
+que é ocupar todo o espaço x ou y dependendo se a flex direction é column ou row
+*/ align-items: stretch;
+
+/*align-content ou alinhamento de conteudo é a mesma coisa que o align-items
+ a unica diferença notavel é que ao juntar a pagina não tem espaçamento entre os itens*/
+align-content: stretch;
+
+
+
+
+background-color: darkgrey;
+height: 400px;
+color: white;
+}
+
+.r1{
+    
+    flex-grow: 0;
+    
+    align-self: flex-end;
+    
+    
+    
+    background-color: red;
+}
+
+.r2{
+
+    flex-grow: 0;
+
+    order: 0;
+
+    align-self: flex-end;
+
+    background-color: blue;
+}
+
+.r3{
+ /*flex-shrink ou contração flexivel é a forma que o item se adapta ao se contrair
+   ele vai de 0 a 1 dizendo se pode ou não encolher ou flexionar por padrão vem 1 */
+    flex-shrink: 1;
+
+/*flex-grow ou contração pra crescer é a forma que o item se adapta ao expandir a tela
+   podendo manter sua forma original ou expandir quanto mais tela tiver podendo contralar
+   melhor com o width ou height desabilitado usando flex-grow*/    
+    flex-grow: 0;
+
+/*order ou ordem serve pra voce alterar a ordem que um elemento esta posicionado
+  todos elementos tem a ordem 0 por padrão podendo mover pra frente com a ordem
+  1 por exemplo e movendo pra tras com a ordem -1 por exemplo assim alterando a ordem*/    
+    order: 0;
+
+/*align-self ou alinhar-se é bascimante um align-content só que em um item apenas*/
+    align-self: flex-end;
+
+
+
+    background-color: green;
+}
+
+.rect{
+width: 150px; 
+height: 150px;
+}
