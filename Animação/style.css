@@ -1,0 +1,270 @@
+body{
+    margin: 0px;
+    padding: 20px;
+    overflow: hidden;
+}
+.flex{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 500px;
+    top: 140px;
+}
+.containerr{
+    width: 100%;
+    height: 40%;
+    display: grid;
+    grid-template: auto auto / auto auto;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 40px;
+    
+
+}
+
+
+
+
+/*//////////////////////////  CRIANDO ANIMAÇÃO  ////////////////////////////////////////////////////////////////////////
+Animação de ir de uma cor para outra cor: etapas
+Primeira criar a animação
+Segunda dizer qual a propriedade que eu quero modificar
+Terceira quanto tempo vai levar do estado A para o estado B
+*/
+
+
+@keyframes mudarCor{  /*Criar animação*/
+    from {background-color: black;} /*estado inicial     */
+    to {background-color: white;} /*estado final        */
+}
+/*"From" ou "apartir de" identifica como fica o estado inicial
+  "To" ou "para", identifica para onde vai o estado final*/
+
+@keyframes mudarCor2{  /*Criar animação*/
+    /* 0%  {background-color: white;} */
+    0% {background-color: red;
+        width:0px} 
+    20% {background-color: orange;}
+    40% {background-color: yellow;}
+    50% {background-color: greenyellow;
+        }
+    60% {background-color: blue;}
+    80% {background-color: darkblue;
+        ;}
+    100% {background-color: violet;
+        width: 300px;}                                                                                 /*
+Voce pode tambem definir o estado da animação com porcentagem
+  E usar mais de um valor a cada estado                                                                                     */ 
+} 
+
+@keyframes mover{ 
+    0% {left: 0px;}
+    100% {left: 300px;}
+/* é possivel mover seu item no keyframe porem o display tem que estar
+   relative
+*/
+}
+
+
+.box{
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    animation-name: mudarCor; /*segunda etapa*/
+    animation-duration: 4s; /*Terceira etapa, tempo de duração*/
+
+
+/*///////////////////////////  DELAY  //////////////////////////////////////////////////////////////////////
+animation delay te da a possibilidade de por um delay ao carregar a pagina
+na sua animação pode tambem ser um delay negativo começando a animação adiantada  */
+    animation-delay: 1s; 
+
+/*////////////////////////////  LOOP  /////////////////////////////////////////////////////////////////////////
+animation-interation-count: serve pra voce definir a repetição da animação
+pode escolher um valor numero, infinite vai repetir infinitamente             */
+    animation-iteration-count:infinite;
+
+
+/*//////////////////////////  DIRECTION  ////////////////////////////////////////////////////////////////////
+animation-direction: define se uma animação deve ser reproduzida para frente,
+para trás ou alternar entre a reprodução da sequência para frente e para trás
+normal, reverse, alternate inverte a direção em cada ciclo
+alternate-reverse inverte a direção em cada ciclo e começa invertido a animação     */
+    animation-direction: alternate-reverse;
+
+
+/*//////////////////////////  ANIMATION FILL MODE  //////////////////////////////////////////////////////////////////////
+animation-fill-mode ou "modo de preenchimento de animação" define como a animação
+vai ficar depois de terminar ou antes de começar se tiver delay
+"none" no delay fica padrao e no final volta pro padrao
+"backwards" no delay aparece o primeiro quadro e ao terminar volta pro padrão     
+"both" no delay aparece o primeiro quadro e ao terminar permanece o ultimo quadro da animação        */
+    animation-fill-mode: none;
+
+/*//////////////////////////  TIMING FUNCTION  //////////////////////////////////////////////////////////////////
+Animation timing function ou função de temporização de animação
+define como uma animação progride pela duração de cada ciclo.   
+
+cubic-bezier(p1, p2, p3, p4) Um autor definiu curva cúbico-bezier
+onde os valores de p1 e p3 devem estar no intervalo de 0 a 1.
+
+"ease" Igual a cubic-bezier(0.25, 0.1, 0.25, 1.0)
+o valor padrão, aumenta a velocidade no meio da animação, diminuindo a velocidade no final.
+
+"linear" Igual a cubic-bezier(0.0, 0.0, 1.0, 1.0)
+anima a uma velocidade uniforme.
+
+"ease-in" Igual a cubic-bezier(0.42, 0, 1.0, 1.0)
+começa devagar com a velocidade de transição da propriedade animadora aumentando até completar.
+
+"ease-out" Igual a cubic-bezier(0, 0, 0.58, 1.0)
+inicia rapidamente, desacelerando a animação continua
+
+"ease-in-out" Igual a cubic-bezier(0.42, 0, 0.58, 1.0)
+começa em transição lenta, acelerando e desacelerando novamente.
+*/
+animation-timing-function: linear;
+
+/*
+Animation: Name Duration timing-function delay interation-count direcion fill-mode
+Também é possivel criar uma animção direto no objeto usando o animation
+*/
+
+
+}.titulo{/* /////////////////////  TRANSITIONS  ///////////////////////////////////////////////////////
+
+Transition-property ou "propriedade de transição" serve pra voce selecionar
+propriedades como background-color pra voce editar a transição com "transition"
+você pode selecionar mais de uma propriedade com virgula que você quer modificar
+o modo de transição e na transição você também pode utilizar a virgula pra diferenciar
+em que propriedade que tipo de transição voce quer aplicar                                                */
+    transition-property: background-color, padding;                                                         /*
+    
+transition-duration ou "duração da transição" serve pra você definir o tempo
+de transição das propriedades que você escolheu no transition-property
+  */transition-duration: 0ms, 300ms;                                                                          /*
+
+transition-delay ou atraso de transição serve pra você defir o atraso
+da transição iniciar das proprieadaes que voce escolheu no transition-property  
+   */transition-delay: 300ms, 0ms;                                                                      /*
+
+transition-timing function ou função de tempo de transição serve pra voce colocar
+um efeito na transição igual o animation-timing-function voce vai escolher um efeito
+pra colocar na transição que voce escolheu no transition property
+   */transition-timing-function: ease-in;
+                                                                                                          /*
+você tambem pode definir uma transição asim, não esqueca da virgula pra adicionar
+mais de uma transição
+    
+    transition: property duration delay timing-function,
+                property duration delay timing-function etc                                              */
+    
+    
+    
+    
+    text-align: center;background-color: blue;width: 500px;display: flex;align-self: center;color: aqua;
+}
+
+
+
+.titulo:hover{
+    background-color: black;
+    padding: 40px;
+}
+.box2{
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    animation-name: mudarCor2; 
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.mover1{
+    position: relative;
+    align-self: center;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    animation-name: mover, mudarCor;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    text-align: center;
+}
+
+.mover2{
+    position: relative;
+    align-self: center;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    animation-name: mover, mudarCor;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    text-align: center;
+}
+
+.mover3{
+    position: relative;
+    align-self: center;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    animation-name: mover, mudarCor;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    text-align: center;
+}
+
+.mover4{
+    position: relative;
+    align-self: center;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    animation-name: mover, mudarCor;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    text-align: center;
+}
+
+.mover5{
+    position: relative;
+    align-self: center;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    animation-name: mover, mudarCor;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    text-align: center;
+}
